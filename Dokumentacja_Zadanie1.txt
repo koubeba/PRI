@@ -1,0 +1,25 @@
+1. Dane wejściowe (podawane jako parametr uruchomienia programu):
+  -double x - wartość, dla której będzie obliczona wartość funkcji sinus hiperboliczny
+    -1 < x < 1 - dla takich wartości obliczenie sumy rozwinięcia szeregu Taylora daje odpowiednio precyzyjne wyniki
+  -int n - rząd przybliżenia
+    1 <= n <= 170 - dla większych wartości wynik działania funkcji silnia spowoduje przekroczenie zakresu wartości double
+
+2. Przedstawienie wyników
+  Program wyświetla trzy wartości (reprezentowane za pomocą double):
+    -Wartośc obliczona za pomocą wbudowanej funkcji sinh()
+    -Wartość obliczona z sumy rozwinięcia szeregu Taylora
+    -Dokładność przybliżenia
+
+3. Funkcje użyte w programie:
+  -double silnia(int x) - funkcja rekurencyjnie obliczająca silnię
+  -double Taylor(double x, int N) - funkcja obliczająca wartość sinusa hiperbolicznego za pomocą sumy rozwinięcia szeregu Taylora
+  -double przyblizenie(double result1, double result2) - funkcja zwracająca wartość przybliżenia, gdzie argumentami są wartości policzone za pomocą funkcji sinh oraz Taylor
+
+  -z biblioteki <math.h>:
+    -pow()
+    -fabs()
+    -sinh()
+
+  -z biblioteki <stdlib.h>:
+    -atoi()
+    -atof()
