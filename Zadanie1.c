@@ -58,8 +58,8 @@ int main (int argc, char **argv)
     return(-1);
   }
 
-  //Sprawdzenie, czy n jest wartoscia miedzy 1 a 170
-  if (n<1 || n>170)
+  //Sprawdzenie, czy n jest wartoscia miedzy 1 a 140
+  if (n<1 || n>140)
   {
     fprintf(stderr, "Podano parametr poza zakresem!\n");
     return(-1);
