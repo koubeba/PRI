@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-// Funkcja rekurencyjnie obliczajaca silnie
+// Funkcja obliczajaca silnie
 double silnia(int x)
 {
-  if (x == 0) return 1.0;
-  else return x * silnia(x-1);
+  int i;
+  int result = 1;
+  for (i = 2; i <= x; i++) result *= i;
+  return result;
 }
 
 // Oblicza wartosc funkcji sinus hiperboliczny za pomoca sumy rozwiniecia szeregu Taylora. N-rzad przyblizenia
@@ -58,8 +60,8 @@ int main (int argc, char **argv)
     return(-1);
   }
 
-  //Sprawdzenie, czy n jest wartoscia miedzy 1 a 140
-  if (n<1 || n>140)
+  //Sprawdzenie, czy n jest wartoscia miedzy 1 a 170
+  if (n<1 || n>170)
   {
     fprintf(stderr, "Podano parametr poza zakresem!\n");
     return(-1);
